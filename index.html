@@ -14,10 +14,61 @@
   <!---->
   <!-- Customization by Michael -->
   <link rel="stylesheet" type="text/css" href="assets/styles/custom.css">
+  .list-group{
+    display:inline-block;
+}
+
+.app_page1 {
+    margin: 0;
+    overflow: hidden;
+    height:100%;
+  }
+
+  
+    #Links {
+      position: absolute;
+      top: 0px;
+      bottom: 0;
+      left: 0%;
+      width: 50%;
+      overflow-y: scroll; 
+    }
+  
+    #Rechts {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0%;
+      overflow-y: scroll;
+      width: 50%;
+    }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgrey; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
+
   <!---->
   <!---->
   <!-- Sortable.js -->
-  <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+  
   <!---->
   <!---->
   <title>Rudern 03</title>
@@ -78,8 +129,38 @@
   </div>
 
   <!-- Optional JavaScript -->
+  
   <!-- SortableJS commands by Michael -->
   <script src="assets/scripts/sortableSAR.js"></script>
+  <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+  Sortable.create(Teilnehmer, {
+    group: 'Aufteilung',
+    animation: 100,
+    swap: true, // Enable swap mode
+	swapClass: "sortable-swap-highlight",
+});
+
+Sortable.create(Norderelbe, {
+    group: 'Aufteilung',
+    animation: 100,
+    swap: true, // Enable swap mode
+	swapClass: "sortable-swap-highlight",
+});
+
+Sortable.create(Katharinenfleet, {
+    group: 'Aufteilung',
+    animation: 100,
+    swap: true, // Enable swap mode
+	swapClass: "sortable-swap-highlight",
+});
+
+Sortable.create(WalterSchroeder, {
+    group: 'Aufteilung',
+    animation: 100,
+    swap: true, // Enable swap mode
+	swapClass: "sortable-swap-highlight",
+});
+  
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
